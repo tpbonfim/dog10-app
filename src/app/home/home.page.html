@@ -3,6 +3,12 @@
     <ion-title>
       HOT-DOGÃO
     </ion-title>
+    <ion-buttons slot="primary">
+      <ion-button [routerLink]="['/add-dog']">
+        <ion-icon color="danger" name="add-circle">
+        </ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -12,13 +18,13 @@
       <ion-card-content>
         <ion-img src={{dog.image}}></ion-img>
         <ion-card-title class="title">
-          {{dog.title}}
+          {{dog.nome}}
         </ion-card-title>
         <ion-card-subtitle class="desc">
           {{dog.preco}}
         </ion-card-subtitle>
         <h1 class="price">
-          {{dog.desc}}
+          {{dog.descricao}}
         </h1>
             <ion-button color="danger" expand="block" [routerLink]="['/finalizar-pedido']">
               <ion-icon name="card"></ion-icon>
